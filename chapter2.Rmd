@@ -9,5 +9,9 @@ I have downloaded and installed R and R studio for my computer. I also did insta
 Working with R is feeling natural, allthough I have some experience using R in advance.  
 
 
-I have some problems concerning my course diary page. I can't get my updates to show up there. Hopeflly I can figure this out soon enough.
+I have some problems concerning my course diary page. I can't get my updates to show up there. Hopeflly I can figure this out soon enough.  
+
+I did manage to solve this problem with help from section 9 in course page. Very nice.  
+
+This course seems to be just what i was looking for.
 
