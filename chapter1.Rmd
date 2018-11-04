@@ -8,5 +8,3 @@ This course is interesting. It is nice to learn RStudio and GitHub stuff. Great.
 Here is link to my GitHub repository:  
 
 <https://github.com/kimsta/IODS-project>
-
-Testataan taas
