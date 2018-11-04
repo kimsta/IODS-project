@@ -17,7 +17,8 @@ A new problem. Now I have accidently two "pages" appearing to my course diary pa
 
 Now I solved this second problem. Apparently it had something to do with my merged branches in github or something. Things are a little bit out of hand for now :)  
 
-It seem that I have to knit and save the index files with encoding every time. I hope I have misunderstood this point for now.
+It seem that I have to knit and save the index files with encoding every time. I hope I have misunderstood this point for now. Now it seems that my course diary page does not update at all. This is starting to feel a bit frustrating..
+
 
 This course seems to be just what i was looking for.
 
