@@ -3,7 +3,7 @@
 output: github_document
 ---
 
-Something about the course here below
+This course seems to be quite dificult at the beginning. Not R but this GutHub stuff.
 
 Link to my course diary:  
 <https://kimsta.github.io/IODS-project/>
