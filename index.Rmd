@@ -1,5 +1,6 @@
 ---
 title: "IODS course project"
+author: "Kim Ståhlberg"
 output:
   html_document:
     theme: cosmo
