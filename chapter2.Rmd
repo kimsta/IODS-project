@@ -1,21 +1,57 @@
-# Week 1 experiences
+# Chapter 2
 
 *Describe the work you have done this week and summarize your learning.*
 
+This week I have read some data from the internet and created a subset from that data with Rstudio and uploaded it into my GitHub repository. I have learned to analyse my dataset with some simple regression analysis and linear modeling. I have also learned to view my data graphicly with libraries GGally and ggplot2.
 
-I have downloaded and installed R and R studio for my computer. I also did instal GitHub desktop application. R tools are useful for working with large datasets and GitHub is usegul for editing code or project online simultaniously with other authors.  
+Report:
+
+I can read my file as follows:
+
+```{r}
+learning <- read.csv("data/learning.csv", sep = ",", header = T)
+dim(learning)
+str(learning)
+```
+
+I named my dataset as learning. It has 7 variables and 166 observations.
+
+Variable attitude represents students attitude.
+Variable deep represents students deep learning skills.
+Variable stra represents students strategic learning skills.
+Variable surf represents students surface learning skills.
+
+All variables above are scaled back to scale 1-5 by taking a mean from a question set in question.
+
+Variables gender and age are self explanatory.
+Variable points is a sum of points from an exam. Observations where points < 1 are left out from this subset.
+
+Variables can be seen in a scatterplot (excluding gender) as follows:
+
+```{r}
+pairs(learning[-1], col = learning$gender)
+```
+
+In scatterplot genders are shown with different colors, red being female and black being male.
+
+If we use libraries GGally and ggplot2 we can see some more detailed information about variables.
+
+```{r}
+library(GGally)
+library(ggplot2)
+
+p <- ggpairs(learning, mapping = aes(col = learning$gender), lower = list(combo = wrap("facethist", bins = 20)))
+p
+```
+
+Now we choose three variables that explains variable points most likely. We choose variables that has highes absolute value of correlation with points; attitude, stra and surf.
+
+```{r}
+my_model <- lm(points ~ attitude + stra + surf, data = learning)
+my_model
+```
+
+It seems like attitude explains most points and surf correlates slightly negatively with points.
 
 
-Working with R is feeling natural, allthough I have some experience using R in advance.  
-
-
-I had some problems concerning my course diary page. I could not get my updates to show up there. I did manage to solve this problem with help from section 9 in course page. Very nice. I just dont yet know if I have to do this fix allways or just once.  
-
-A new problem appeared. I managed to create two different versions on my course page. Apparently it had something to do with my merged branches in github or something. 
-
-It seem that I have to knit and save the index files with encoding every time. I hope I have misunderstood this point for now. Now it seems that my course diary page does not update at all. Okay. The delay seems to be something like 20 mins or so. I did think it would be more like few minutes. I am also wondering do I have to make changes in the project files to push them to GitHub or can I just save the index file with encoding and push.  
-
-This week i have learned the very basics of R, RStudio and GitHub. The hardest seems to be GitHub but i'm sure it will work out just fine after a week or two.
-
-This course seems to be just what i was looking for.
 
